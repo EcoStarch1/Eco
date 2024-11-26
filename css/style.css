@@ -1,0 +1,905 @@
+:root{
+    --pink:#068d13; 
+}
+
+*{
+    margin: 0; padding:0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none; border: none;
+    text-decoration:none;
+    text-transform:capitalize;
+    transition: .2s linear;
+}
+
+/* Darle tamaño a la letra  */
+
+html {
+    font-size: 55%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 0; /* Ajusta esto si es necesario */
+    overflow-x: hidden;
+}
+
+
+section {
+    padding: 2rem 9%;
+}
+
+
+/* Diseño a la letra de ABOUT US y del pading abajo */
+.heading{
+text-align: center;
+font-size: 3.5rem;
+color:#ffffff; /* letras */
+padding: 1rem;
+margin: 2rem 0;
+background:#965709; /* color al pading*/
+}
+
+/*DARLE COLOR A LA LETRA DE NUESTROS PRODUCTOS*/
+.products .heading span {
+    color: #ffffff !important; }
+    
+
+/*DARLE COLOR A LA LETRA DE NUESTROS PRODUCTOS*/
+.review .heading span {
+color: #ffffff !important; /* Fuerza el color blanco */
+}
+
+.about .heading span{
+color: #ffffff!important; /* Fuerza el color blanco */
+}
+.contact .heading span{
+color: #ffffff !important; /* Fuerza el color blanco */
+}
+
+
+
+.heading span{
+    color: var(--pink);
+}
+
+
+/* Diseño del boton SHOP NOW  */
+.btn{
+   display: inline-block;
+   margin-top: 1rem;
+   border-radius: 5rem;
+   background: #068d13;
+   color: #ffffff;
+   padding: .6rem 2rem;
+   font-weight: bold;
+   cursor: pointer;
+   font-size: 1.6rem;
+}
+/* Color rosado para el boton SHOP NOW  */
+.btn:hover{
+    background:#784405; 
+}
+
+/* Darle tamaño y color al padding */
+header{
+    position: fixed;
+    top:0; left:0; right:0;
+    background: #ffffff;
+    padding:1.7rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index:1000;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
+
+}
+/* Darle color y tamaño a la letra FLOWERS */
+header .logo{
+    font-size: 2.8rem;
+    color: #333;
+    font-weight: bolder;
+}
+
+header .logo span{
+    color: var(--pink);
+}
+
+/* Darle color a la letra del encabezado (Home, about, etc */
+header .navbar a{
+    font-size: 1.8rem;
+    padding:0 1.5rem;
+    color: #784405; 
+    font-weight: bold;
+}
+
+ /* Darle color de sombra a la letra  */
+header .navbar a:hover{
+color: var(--pink);
+}
+
+ /* Darle color y tamaño a los iconos */
+header .icons a{
+ font-size: 2.5rem;
+ color:#784405; 
+ margin-left: 1.5rem;
+}
+
+ /* Darle una sombra de color a los iconos */
+header .icons a:hover{
+    color: var(--pink);
+}
+
+header #toggler{
+    display: none;
+}
+
+/* Agregar una opción en el padding */
+header .fa-bars{
+    font-size: 3rem;
+    color: #333;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    border: .1rem solid rgba(0,0,0,.3);
+    display: none;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    height: 25px; /* Ajusta según el tamaño de tu logo */
+    padding: 20 px; /* Ajusta según el espacio que necesites alrededor del logo */
+    background-image: url('Imagenes/logo.png'); /* Reemplaza con la ruta de tu logo */
+    background-size: contain; /* Ajusta el tamaño del logo */
+    background-repeat: no-repeat; /* No repetir la imagen */
+    background-position:left; 
+}
+
+/* Agregar imagen principal de fondo */
+.home{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background: url(../Imagenes/1bol.jpeg) no-repeat center center; /* Ajusta la ruta si es necesario */
+    background-size: cover;
+}
+
+.home .content{
+    position: absolute;
+    top: 190px; /* Ajusta el valor según lo necesites */
+    right: 100px; /* Ajusta el valor según lo necesites */
+    text-align: right; /* Alinea el texto a la derecha */
+    max-width: 95rem;
+}
+
+/* Darle color y tamaño al título de la letra en la pantalla incio*/
+.home .content h4{
+    font-size: 3.3rem;
+    color: #784405; 
+}
+
+/* Darle color al subtitulo de la letra en la pantalla incio*/
+.home .content span{
+    font-size: 1.6rem;
+    color: #784405; 
+    padding: 2rem 1;
+    line-height: 1.5;
+}
+
+/* Estilo general de la sección about */
+.about .row {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+}
+
+.about .row .video-container {
+    flex: 1 1 40rem;
+    position: relative;
+}
+
+/* Darle diseño al video de about us */
+.about .row .video-container video {
+    width: 100%;
+    border: 1.5rem solid #fff;
+    border-radius: .9rem;
+    box-shadow: 0 .5rem 1rem rgba(239, 4, 4, 0.1);
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Arreglar las letras que están adentro del video */
+.about .row .video-container h3 {
+    position: absolute;
+    top: 50%; 
+    transform: translateY(-50%);
+    font-size: 2rem;
+    background: #fff;
+    width: 100%;
+    padding: 1rem 1rem;
+    mix-blend-mode: screen;
+}
+
+.about .row .content {
+    flex: 1 1 40rem;
+}
+
+/* Arreglar las letras de por qué elegirnos en SOBRE NOSOTROS */
+.about .row .content h3 {
+    font-size: 2.6rem;
+    color: #068d13;
+}
+
+/* Arreglar las letras de abajo de por qué elegirnos en SOBRE NOSOTROS */
+.about .row .content p {
+    font-size: 1.5rem;
+    text-transform: none;
+    text-align: justify;
+    color: #333;
+    padding: 1.1rem 0;
+    padding-top: 2rem;
+    line-height: 1.5;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* --- NUEVOS ESTILOS PARA MISIÓN Y VISIÓN --- */
+.mision-vision {
+    display: flex; /* Alinear en fila */
+    justify-content: space-around; /* Espacio entre los bloques */
+    flex-wrap: wrap; /* Ajustar en pantallas pequeñas */
+    background: url(../Imagenes/prueba\ \(9\).jpeg) no-repeat center center;
+    padding: 10px;
+    border-radius: 15px;
+    color: white; /* Texto blanco */
+    margin-top: 10px; /* Separación de la parte superior */
+    margin-right: 20px; /* Separación de derecha del cuadro */
+}
+
+/* Estilo para cada bloque de Misión y Visión */
+.mision, .vision {
+    background: white; /* Fondo blanco */
+    color: #333; /* Texto negro */
+    width: 45%; /* Mitad del contenedor */
+    margin: 10px;
+    padding: 15px;
+    text-align: center; /* Centra el texto */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.17); /* Sombra */
+}
+
+/* Títulos de Misión y Visión */
+.mision h2, .vision h2 {
+    font-size: 20px;
+    color: #068d13; /* Verde para los títulos */
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+/* Texto en los párrafos */
+.mision p, .vision p {
+    text-transform: none;
+    text-align: justify;
+    font-size: 14px;
+    line-height: 1.3;
+    margin: 0;
+}
+
+/* Diseño adaptable para móviles */
+@media (max-width: 768px) {
+    .mision, .vision {
+        width: 100%; /* Bloques ocupan todo el ancho en móviles */
+    }
+}
+
+.icons-container{
+    background: #eeeeee; 
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+}
+
+/*Arreglar los iconos de ABOUT US*/
+.icons-container .icons{
+    background: #ffffff;
+    border: 1rem solid rgb(3, 155, 31);
+    padding: 1rem;
+    display:flex;
+    align-items: center;
+    flex: 1 1 30rem;
+}
+
+/*Arreglar el tamaño de los iconos de ABOUT US*/
+.icons-container .icons img{
+    height: 6rem;
+    margin-right: 2rem;
+}
+
+/*Arreglar el tamaño de la letra debajo de los iconos de ABOUT US*/
+.icons-container .icons h3{
+color: #252525;
+font-weight: bold;
+padding-bottom: .4rem;
+font-size: 1.2rem;
+}
+
+/*Arreglar el tamaño de la letra debajo de los iconos de ABOUT US*/
+.icons-container .icons span{
+    color: #474747;
+    font-size: 1.4rem;
+    }
+
+
+    .products .box-container {
+        display: grid; /* Distribución en cuadrícula */
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Cuadros distribuidos en columnas */
+        gap: 2rem; /* Separación entre cuadros */
+    }
+    
+    /* Estilo básico de los cuadros */
+    .products .box-container .box {
+        box-shadow: 0 .4rem 1.5rem #c3740c;
+        border-radius: .5rem;
+        border: .1rem solid rgba(0, 0, 0, .1);
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s ease; /* Transición suave */
+    }
+    
+    /* Cuadro activo (expandido) */
+    .products .box-container .box.activo {
+        grid-column: span 1; /* Se mantiene en la misma columna */
+        overflow: visible; /* Permite mostrar más contenido */
+    }
+    
+    /* Información adicional (oculta por defecto) */
+    .products .informacion-adicional {
+        display: none;
+        padding: 1rem;
+        background-color: #079b15;
+        border-radius: 0.2rem;
+        margin-top: 1rem;
+        color: white;
+    }
+    
+    /* Mostrar información adicional en el cuadro activo */
+    .products .box-container .box.activo .informacion-adicional {
+        display: block;
+    }
+    
+    /* Imagen y hover */
+    .products .box-container .box .image img {
+        height: 20rem;
+        transition: transform 0.3s ease;
+    }
+    .products .box-container .box:hover .image img {
+        transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
+    }
+    
+    /* Botón de "Ver más" */
+    .ver-mas-btn {
+        background-color: #28a745;
+        color: white;
+        border: none;
+        padding: 0.7rem 1rem;
+        text-transform: none;
+        cursor: pointer;
+        font-size: 1.3rem;
+        margin-top: 1rem;
+        border-radius: 0.35rem;
+    }
+    .ver-mas-btn:hover {
+        background-color: #965709;
+    }
+   
+    .products .box-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+    }
+    /*sombra donde van los productos */
+    .products .box-container .box {
+        flex: 1 1 30rem;
+        box-shadow: 0 .4rem 1.5rem #c3740c;
+        border-radius: .5rem;
+        border: .1rem solid rgba(0, 0, 0, .1);
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s ease; /* Transición suave */
+    }
+    
+    /* Cuadro activo (expandido) */
+    .products .box-container .box.activo {
+        overflow: visible; /* Permite mostrar más contenido */
+    }
+    
+    /*porcentaje de los productos */
+    .products .box-container .box .discount {
+        position: absolute;
+        text-align: center;
+        text-transform: none;
+        top: 1rem; left: 0rem;
+        padding: .2rem 2rem;
+        font-size: 2rem;
+        font-weight: bold;
+        color: #7f4805;
+        z-index: 1;
+        border-radius: .5rem;
+    }
+    .products .box-container .box .discountttt {
+        position: absolute;
+        text-align: center;
+        text-transform: none;
+        top: 1rem; left: 3rem;
+        padding: .2rem 2rem;
+        font-size: 2rem;
+        font-weight: bold;
+        color: #7f4805;
+        z-index: 1;
+        border-radius: .5rem;
+    }
+    /*(texto de 100 unidades) */
+    .products .box-container .box .discountt {
+        position: absolute;
+        text-align: center;
+        top: 3.8rem; left: 11rem;
+        padding: .2rem 2rem;
+        font-weight: bold;
+        text-transform: none;
+        font-size: 1.6rem;
+        color: #7f4805;
+    }
+    
+    .products .box-container .box .discounttt {
+        position: absolute;
+        text-align: center;
+        top: 3.8rem; left: 11rem;
+        padding: .2rem 2rem;
+        font-weight: bold;
+        text-transform: none;
+        font-size: 1.6rem;
+        color: #7f4805;
+    }
+    /*espacio de la imagen y el cuadro */
+    .products .box-container .box .image {
+        position: relative;
+        text-align: center;
+        padding-top: 2rem;
+        overflow: hidden;
+    }
+    .products .box-container .box .image img {
+        height: 20rem;
+    }
+    .products .box-container .box:hover .image img {
+        transform: scale(1.1);
+    }
+    .products .box-container .box .image .icons {
+        position: absolute;
+        bottom: -7rem; left: 0; right: 0;
+        display: flex;
+    }
+    
+    .products .box-container .box:hover .image .icons {
+        bottom: 0;
+    }
+    .products .box-container .box .image .icons a {
+        height: 3rem;
+        line-height: 3rem;
+        font-size: 2rem;
+        width: 50%;
+        background: var(--pink);
+        color: #fff;
+       }
+    
+    .products .box-container .box .image .icons .cart-btn {
+        border-left: .1rem solid #fff7;
+        border-right: .1rem solid #fff7;
+        width: 100%;
+    }
+    .products .box-container .box .image .icons a:hover { 
+        
+        background: #965709;
+    }
+    
+    .products .box-container .box .content {
+        padding: 1rem;
+        text-align: center;
+    }
+    
+    .products .box-container .box .content h3 { /* editar color del precio en los productos*/
+        font-size: 1.8rem;
+        font-weight: bold;
+        color:#754102;
+    }
+    .products .box-container .box .content p { /* texto de 100 unidades*/
+        font-size: 1.5rem;
+        color: #333
+    }
+    .products .box-container .box .content .price {
+        font-size: 2rem;
+        color: var(--pink);
+        font-weight: bolder;
+        padding-top: 1rem;
+    }
+    /* editar el color del precio tachado */
+    .products .box-container .box .content .price span {
+        font-size: 1.6rem;
+        color: #6c6b6b;
+        font-weight: lighter;
+        text-decoration: line-through;
+    }
+    
+    /* Estilo para la información adicional (oculta por defecto) */
+    .products .informacion-adicional {
+        display: none;
+        padding: 1rem;
+        background-color: #079b15;
+        border-radius: 0.2rem;
+        margin-top: 1rem;
+    }
+     
+    .products .informacion-adicional p {
+        font-size: 1.5rem; /* Tamaño de letra */
+        color: #ffffff; /* Color blanco */
+        font-weight: bold; /* Negrita */
+        font-family: Arial, sans-serif; /* Tipo de letra */
+        text-align: center; /* Centrado del texto */
+        text-transform: uppercase; /* Hacer el texto en mayúsculas */
+    }
+    
+    .products .informacion-adicional .colores-disponibles {
+        display: flex; /* Activar Flexbox */
+        justify-content: center; /* Centrar horizontalmente */
+        gap: 10px; /* Espaciado entre los colores */
+        margin-top: 10px;
+        align-items: center; /* Centrar verticalmente (opcional) */
+        flex-wrap: wrap; /* Permite que los colores se acomoden en varias filas si hay muchos */
+    }
+    .color {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        display: inline-block;
+        cursor: pointer;
+    }
+    .color[style*="white"] {
+        border: 1px solid #ccc; /* Para el color blanco, le damos un borde visible */
+    }
+    
+    /* Mostrar información adicional en el cuadro activo */
+    .products .box-container .box.activo .informacion-adicional {
+        display: block;
+    }
+    
+    /* Estilo para el botón de "Ver más" */
+    .ver-mas-btn {
+        background-color: #28a745;
+        color: white;
+        border: none;
+        padding: 0.7rem 1rem;
+        text-transform: none;
+        cursor: pointer;
+        font-size: 1.3rem;
+        margin-top: 1rem;
+        border-radius: 0.35rem;
+    }
+    .ver-mas-btn:hover {
+        background-color: #965709;
+    }
+
+  
+
+   /* editar el espacio entre cada cuadro*/
+   .review .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+   }
+
+   /**** editar los bordes y el tamaño del contenedor ***/
+   .review .box-container .box{
+    flex: 1 1 35rem;
+    box-shadow: 0 .2rem 1.2rem #068d13;
+    border-radius: 1rem;
+    padding: 3rem 3rem;
+    position: relative;
+    border: .1rem solid rgba(6, 227, 61, 0.467);
+   }
+   
+/**** ediar la viñeta de los clientes***/
+   .review .box-container .box .fa-quote-right{
+    position:absolute;
+    bottom: 1rem; right: 3rem;
+    font-size: 2.5rem;
+    color: #0fa81e ;
+   }
+
+/**** ediar el color y tamaño de las estrellas***/
+   .review .box-container .box .stars i{
+    color: #0fa81e;
+    font-size: 2rem;
+   }
+
+   /**** ediar los comentarios de los clientes***/
+   .review .box-container .box p{
+    color: #434242;
+    text-transform: none;
+    text-align: justify;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    padding-top: 1.5rem;
+   }
+
+/**** ajustar el nombre de los clientes***/
+   .review .box-container .box .user{
+    display: flex;
+    align-items:center;
+    padding-top: 2rem;
+   }
+
+/**** ediar la imagen***/
+   .review .box-container .box .user img{
+    width:8rem ;
+    height: 6rem;
+    object-fit: contain;
+    margin-right: 1rem;
+   }
+/**** ediar el nombre de los clientes***/
+   .review .box-container .box .user h3{
+    font-size: 2rem;
+    color: #474747;
+   }
+
+   /**** ediar la letra abajo de la foto de los clientes***/
+   .review .box-container .box .user span{
+    font-size: 1.5rem;
+    color: #605f5f;
+    text-align: center;
+     text-align: justify;
+    display: block;
+   }
+
+
+
+/* Contenedor general para formulario y mapa/redes sociales */
+.contact .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+    border: 0.2rem solid rgba(0, 0, 0, 0.1); /* Borde general */
+    border-radius: 1rem; /* Esquinas redondeadas */
+    background: #ffffff; /* Fondo blanco */
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+/* Estilo del formulario */
+.contact .row form {
+    flex: 1 1 40rem;
+    padding: 2rem 2.5rem;
+    background: #e9fbe9; /* Fondo claro */
+    border-radius: .5rem;
+    border: .1rem solid rgba(4, 220, 58, 0.381);
+    box-shadow: 0 .1rem 1rem #068d13; /* Quitamos sombras del contenedor individual */
+    border:#252525; /* Quitamos bordes del contenedor individual */
+}
+
+/* Contenedor para el mapa y redes sociales */
+.contact .row .map-social {
+    flex: 1 1 40rem;
+    padding: 2rem;
+    background: #ffffff; /* Fondo claro */
+    border-radius: .3rem;
+    position: relative;
+    border: .1rem solid rgba(4, 220, 58, 0.381);
+    box-shadow: 0 .1rem 1rem #068d13; /* Quitamos sombras del contenedor individual */
+    border:#252525; /* Quitamos bordes del contenedor individual */
+}
+
+/* Estilo del título sobre el mapa */
+.map-social .map-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #7f4805;
+}
+
+/* Estilo del cuadro de redes sociales */
+.map-social .social-box {
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    background-color: #e9fbe9;
+    border-radius: .4rem;
+    box-shadow: 0 .2rem 1rem rgba(0, 0, 0, .1);
+    text-align: center;
+}
+
+/* Redes sociales texto */
+.map-social .social-box h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #7f4805;
+}
+/* texto de abajo facebook, insta etc */
+.map-social .social-box .social-icons a {
+    display: inline-block;
+    margin: 0.5rem 1rem;
+    color: #079b15;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+/* texto de abajo facebook, insta etc cambia de color al darle click */
+.map-social .social-box .social-icons a:hover {
+    color: #7f4805;
+    text-decoration: underline;
+}
+
+
+
+.contact .row .image{
+    flex: 1 1 40rem;
+}
+
+.contact .row img{
+    width: 100%;
+}
+.contact .row form .box{
+    padding: 1rem;
+    font-size: 1.7rem;
+    color: #202020;
+    text-transform: none;
+    border: .1rem solid rgba(0,0,0,.1);
+    border-radius: .5rem;
+    margin: .7rem 0;
+    width: 100%;
+}
+.contact .row form .box:focus{
+    border-color: var(--pink);
+}
+.contact .row form textarea{
+    height: 15rem;
+    resize: none;
+}
+
+
+
+
+
+
+
+
+.footer .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.footer .box-container .box{
+    flex: 1 1 25rem;
+}
+
+.footer .box-container .box h3{
+    color:#333;
+    font-size: 2.5rem;
+    padding: 1rem 0;
+}
+
+.footer .box-container .box a{
+    display: block;
+    color: #666;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+
+.footer .box-container .box a:hover{
+    color: var(--pink);
+    text-decoration: underline;
+}
+
+.footer .box-container .box img{
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    height: 35px; /* Ajusta según el tamaño de tu logo */
+    background-size: contain; /* Ajusta el tamaño del logo */
+    background-repeat: no-repeat; /* No repetir la imagen */
+    background-position:left; 
+}
+
+.footer .credit{
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    padding-top: 2.5rem;
+    font-weight: bold;
+    font-size: 2rem;
+    text-transform: none;
+    color: #333;
+    border-top: .1rem solid rgba(0,0,0,.1);
+}
+
+.footer .credit span{
+    color: var(--pink);
+}
+
+
+
+
+
+
+/* Hacer responsive la página, ajustar la pantalla en cualquier tamaño*/
+@media (max-width:991px) {
+  
+    html{
+    font-size: 55%;
+    }
+    
+    header {
+    padding: 2rem;
+    }
+
+     section{
+        padding: 2rem;
+     }
+
+     .home{
+        background-position: left;
+     }
+
+}
+
+@media (max-width:768px) {
+    header .fa-bars{
+        display: block;
+    }
+    header .navbar{
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background: #eee;
+        border-top: .1rem solid rgba(0,0,0,.1);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+  
+    /* Para ocultar y mostrar las opciones  */
+    header #toggler:checked ~ .navbar {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    header .navbar a{
+    margin: 1.5rem;
+    padding: 1.5rem;
+    background: #fff;
+    border: .1rem solid rgba(0,0,0,.1);
+    display: block;
+    }
+/* Tamaño de letra de la pantalla de inicio la belleza de las flores  */
+     .home .content h4{
+        font-size: 5rem;
+     }
+     /* Tamaño de letra de la pantalla de inicio flores frescas   */
+
+     .home .content span{
+        font-size: 2.5rem;
+     }
+
+}
+
+@media (max-width:450px) {
+  
+    html{
+    font-size: 50%;
+    }
+
+    .heading{
+        font-size: 3rem;
+    }
+
+}
